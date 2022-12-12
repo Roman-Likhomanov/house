@@ -1,0 +1,70 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.mainBlock {
+  min-height: 100vh;
+  display: flex;
+  padding-top: 60px;
+  @media screen and (max-width: 566px) {
+    padding-top: 150px;
+  }
+  .container {
+    @include container();
+    @media screen and (max-width: 939px){
+      justify-content: center;
+    }
+  }
+
+  .text {
+    width: 400px;
+    & h1 {
+      color: $textColor;
+    }
+    & span {
+      color: $primaryColor;
+      font-family: 'Saira', sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      @media screen and (max-width: 374px){
+        font-size: 23px;
+      }
+    }
+  }
+
+  .photo{
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: 939px){
+      margin-top: 50px;
+    }
+    .img {
+      width: 320px;
+      height: 420px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      @media screen and (max-width: 600px){
+        height: 360px;
+        width: 260px;
+      }
+    }
+    &:before {
+      content:'';
+      position: absolute;
+      height: 110%;
+      width:105%;
+      border: 5px solid $primaryColor;
+      right: 15px;
+      top: -15px;
+      z-index: -1;
+    }
+  }
+
+}
+
+
+
+
+

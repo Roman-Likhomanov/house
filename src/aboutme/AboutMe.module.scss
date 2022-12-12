@@ -1,0 +1,42 @@
+@import '../common/styles/sass/variables';
+
+.aboutMeBlock {
+  min-height: 100vh;
+  padding-top: 90px;
+
+  .aboutMeContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .aboutText {
+      margin-top: 60px;
+      margin-bottom: 50px;
+      color: $textSecondColor;
+      text-align: center;
+    }
+
+    .aboutMe {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 629px) {
+        justify-content: center;
+      }
+    }
+    .skillText {
+      color: $textSecondColor;
+      text-align: center;
+      margin: 50px 0 50px 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
